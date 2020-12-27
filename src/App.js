@@ -21,7 +21,7 @@ const containerStyle = {
   // position: "relative",
 };
 // set Google Maps Geocoding API for purposes of quota management. Its optional but recommended.
-Geocode.setApiKey("AIzaSyBf5r8T5cUQegFU2OcR8qbscn-LqHgmleQ");
+Geocode.setApiKey("");
 
 // set response language. Defaults to english.
 Geocode.setLanguage("en");
@@ -88,7 +88,7 @@ class App extends React.Component {
     const { lat, lng } = this.state;
     var arrData = [];
     return fetch(
-      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=3c87e20e286cbedfe37725bece8834ad`
+      `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&units=metric&appid=demo`
     )
       .then((response) => response.json())
       .then((json) => {
@@ -107,7 +107,7 @@ class App extends React.Component {
     try {
       let res = await axios({
         url:
-          "https://cors-anywhere.herokuapp.com/https://v2.api.forex/rates/latest.json?from=USD&key=2cf07889-ccce-44bb-9e83-b276403d3b4c",
+          "https://cors-anywhere.herokuapp.com/https://v2.api.forex/rates/latest.json?from=USD&key=demo",
         method: "get",
         timeout: 3000, // 3 seconds tak data nhi mila to terminate
         headers: {
